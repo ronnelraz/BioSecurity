@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectBusiness">
+
+
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/back"
+       android:layout_marginLeft="10dp"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentLeft="true"
+       android:layout_marginTop="5dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Back"
+       style="@style/Widget.MaterialComponents.Button.TextButton"
+       app:cornerRadius="20dp"
+       app:elevation="10dp"
+       app:icon="@drawable/arrow"
+       app:iconTint="@color/error"
+       android:foregroundTint="@color/error"
+       android:textColor="@color/error"/>
+
+
+   <LinearLayout
+       android:layout_marginTop="55dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+      android:orientation="vertical">
+      
+      
+      <TextView
+          android:padding="10dp"
+          android:background="@drawable/rounded"
+          android:textAlignment="center"
+          android:backgroundTint="#E2F5FD"
+          android:textColor="@color/menubtn_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Please select Business that you would like to access"
+          android:textSize="23sp"
+          android:id="@+id/header"
+          android:fontFamily="@font/cpfbold"/>
+
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/data"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:listitem="@layout/menu_business"
+          tools:itemCount="2"/>
+
+   </LinearLayout>
+
+   <com.airbnb.lottie.LottieAnimationView
+       android:id="@+id/loading"
+       android:layout_width="250dp"
+       android:layout_height="250dp"
+       android:layout_centerInParent="true"
+       app:lottie_autoPlay="true"
+       app:lottie_loop="true"
+       app:lottie_rawRes="@raw/loading"
+       app:lottie_renderMode="automatic" />
+
+
+
+
+</RelativeLayout>

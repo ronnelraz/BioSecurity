@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checklist_Create">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Checklist"
+            app:titleTextColor="@color/white"
+            app:navigationIconTint="@color/white"
+            app:navigationContentDescription="Back"
+            app:navigationIcon="@drawable/arrow"
+            android:id="@+id/toolbar"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loading">
+
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+        <include layout="@layout/loading_shimmer_checklist"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:visibility="gone"
+        android:id="@+id/checklistData"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/checklist_item"
+        tools:itemCount="2"/>
+
+</RelativeLayout>

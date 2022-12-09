@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardCornerRadius="10dp"
+        android:layout_centerInParent="true"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+
+      <LinearLayout
+          android:layout_margin="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                tools:src="@drawable/success_dialog"
+                android:id="@+id/dialog_icon"/>
+
+          <TextView
+              android:id="@+id/dialog_title"
+              android:layout_marginTop="13dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:text="@string/app_name"
+              android:textAlignment="center"
+              android:fontFamily="@font/archivo_semibold"
+              android:textSize="18sp"/>
+
+          <TextView
+              android:layout_marginTop="10dp"
+              android:id="@+id/dialog_details"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/archivo"
+              android:textAlignment="center"
+              android:textSize="14sp"
+              tools:text="@string/sample_details" />
+
+          <LinearLayout
+              android:gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <com.google.android.material.button.MaterialButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/dialog_positive_btn"
+                  android:fontFamily="@font/archivo_semibold"
+                  android:textSize="12sp"
+                  android:layout_marginRight="5dp"
+                  android:text="Okay"
+                  app:backgroundTint="@color/positive"/>
+
+
+              <com.google.android.material.button.MaterialButton
+                  android:layout_marginLeft="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="cancel"
+                  android:fontFamily="@font/archivo_semibold"
+                  android:textSize="12sp"
+                  app:backgroundTint="@color/error"
+                  android:id="@+id/dialog_negative_btn"/>
+
+
+          </LinearLayout>
+
+
+
+      </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

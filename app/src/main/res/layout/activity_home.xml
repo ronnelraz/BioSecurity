@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:id="@+id/appbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:theme="@style/Theme.BioSecurityChecklist">
+
+       <androidx.appcompat.widget.Toolbar
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/toolbar"
+           app:menu="@menu/menu"
+           app:title="BioSecurity Checklist"
+           app:titleTextColor="@color/bgEdit"
+           app:titleTextAppearance="@style/toolbar_text"
+           app:logo="@drawable/survey_32"/>
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+
+     <include layout="@layout/user_info"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user_profile"
+        tools:listitem="@layout/menu_list_items"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:itemCount="10" />
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BioSecurityChecklist</string>
+    <string name="sample_details">Go to the MainActivity.kt file and refer to the following code. Below is the code for the MainActivity.kt file. Comments are added inside the code to understand the code in more detail.</string>
+    <string name="todo">TODO</string>
+</resources>

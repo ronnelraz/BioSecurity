@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Save"
+        android:id="@+id/save"
+        android:textColor="@color/even"
+        android:layout_marginRight="2dp"
+        app:icon="@drawable/check"
+        app:iconSize="18dp"
+        app:iconGravity="textStart"
+        app:iconPadding="5dp"
+        android:backgroundTint="@color/positive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancel"
+        android:id="@+id/cancel"
+        android:textColor="@color/even"
+        android:backgroundTint="@color/error"
+        app:icon="@drawable/close"
+        app:iconSize="18dp"
+        app:iconGravity="textStart"
+        app:iconPadding="5dp"
+        android:layout_marginLeft="2dp"/>
+
+
+</LinearLayout>
